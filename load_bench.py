@@ -1,7 +1,7 @@
 from datasets import load_dataset
 import subprocess
 
-def dowmload_repo(repo, path):
+def download_repo(repo, path):
     url = f"https://github.com/{repo}.git"
     #!git clone $url $path
     print(f"Cloning {url} to {path}")
@@ -14,4 +14,4 @@ if __name__ == "__main__":
     print(dataset["dev"][0]["repo"])
     print(dataset["dev"][0]["problem_statement"])
 
-    dowmload_repo(dataset["dev"][0]["repo"], "repo")
+    download_repo(dataset["dev"][0]["repo"], "repo")
